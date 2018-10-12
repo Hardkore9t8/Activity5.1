@@ -16,6 +16,7 @@ public class Main {
         InteriorFeature myInterior1 = new InteriorFeature("Climate Control");
         ExteriorFeature myExterior = new ExteriorFeature();
         ExteriorFeature myExterior1 = new ExteriorFeature("Fog Lamps");
+        Vehicle myVehicle = new Vehicle();
      // System.out.println(myChassis.toString());
       //System.out.println(yourChassis.toString());
      // System.out.println(myFrame.toString());
@@ -30,6 +31,18 @@ public class Main {
         System.out.println();
         System.out.println(myExterior.toString());
         System.out.println(myExterior1.toString());
+        System.out.println();
+        System.out.println(myVehicle.toString());
 
     }
+  public static void testVehicle() {
+    Vehicle v1 = new Vehicle();
+    System.out.println(v1);
+
+    Vehicle v2 = new Vehicle(new Date(), "Honda", "Prelude", "Coupe",
+        new VehicleChassis("Unibody"), "null", "type",
+        new ManufacturedEngine("Honda", new Date(), "H-series",
+            "H23A1", 4, "88 AKI", "2WD: Two-Wheel Drive"));
+    System.out.println(v2);
+  }
 }

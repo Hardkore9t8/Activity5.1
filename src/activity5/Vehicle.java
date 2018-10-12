@@ -20,7 +20,7 @@ public class Vehicle implements Engine,Chassis {
     this.vehicleManufacturer = "Generic";
     this.vehicleMake = "Generic";
     this.vehicleModel = "Generic";
-    this.vehicleFrame = new VehicleFrame();
+    this.vehicleFrame = new VehicleChassis();
     this.vehicleType = "Generic";
     this.driveTrain = "Generic";
     this.vehicleEngine = new ManufacturedEngine();
@@ -117,15 +117,13 @@ public class Vehicle implements Engine,Chassis {
 
   @Override
   public String toString() {
-    return "Vehicle{" +
-        "vehicleManufacturedDate=" + vehicleManufacturedDate +
-        ", vehicleManufacturer='" + vehicleManufacturer + '\'' +
-        ", vehicleMake='" + vehicleMake + '\'' +
-        ", vehicleModel='" + vehicleModel + '\'' +
-        ", vehicleFrame=" + vehicleFrame +
-        ", vehicleType='" + vehicleType + '\'' +
-        ", driveTrain='" + driveTrain + '\'' +
-        ", vehicleEngine=" + vehicleEngine +
-        '}';
+    return "Manufacturer Name     :" + vehicleManufacturer + "\n" +
+            "Manufactured Date     :" + vehicleManufacturedDate +"\n"+
+            "Vehicle Make          :" + vehicleMake + "\n" +
+            "Vehicle Model         :" + vehicleModel + "\n" +
+            "Vehicle Type          :" + vehicleType + "\n" +
+            "Drive Train           :" + driveTrain + "\n" +
+              vehicleEngine;
   }
+
 }
