@@ -6,6 +6,8 @@ import activity5.ExteriorFeature;
 import activity5.Feature;
 import activity5.InteriorFeature;
 import activity5.Vehicle;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Car extends Vehicle {
@@ -14,6 +16,8 @@ public class Car extends Vehicle {
 
   public Car() {
     super();
+    Feature[] feat = {new InteriorFeature("no interior features"), new ExteriorFeature("no exterior features")};
+    this.feature = feat;
   }
 
   public Car(Feature[] feature, int carAxle) {
@@ -31,11 +35,42 @@ public class Car extends Vehicle {
 
   }
 
-  ExteriorFeature getExteriorFeatures(){
-    ExteriorFeature exteriorFeature = new ExteriorFeature();
-    return exteriorFeature;}
+  public String getExteriorFeatures(){
+    String output = "";
+    ArrayList<Feature> exFeature = new ArrayList<>();
+    for(Feature F: feature)
+      if (F instanceof ExteriorFeature){
+        exFeature.add(F);
+      }
+    for (int i = 0; i< exFeature.size(); i++)
+    output += exFeature.get(i).getFeature();
 
-  InteriorFeature getInteriorFeatures(){
-    InteriorFeature interiorFeature = new InteriorFeature();
-    return interiorFeature;}
+    return output;}
+
+    public String  getInteriorFeatures(){
+    String output = "";
+    ArrayList<Feature> inFeature = new ArrayList<>();
+    for(Feature F: feature)
+      if (F instanceof InteriorFeature){
+        inFeature.add(F);
+      }
+    for (int i = 0; i< inFeature.size(); i++)
+      output += inFeature.get(i).getFeature();
+
+    return output;}
+
+  @Override
+  public String toString() {
+    return super.toString() + "\n" +
+        "Car{" +
+        "feature=" + getExteriorFeatures() + getInteriorFeatures() +
+        ", carAxle=" + carAxle;
+  }
+
+
+  public static void main(String[] args){
+    Car car1 = new Car();
+
+    System.out.println(car1);
+  }
 }

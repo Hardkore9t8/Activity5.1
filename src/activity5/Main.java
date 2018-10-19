@@ -17,23 +17,25 @@ public class Main {
         ExteriorFeature myExterior = new ExteriorFeature();
         ExteriorFeature myExterior1 = new ExteriorFeature("Fog Lamps");
         Vehicle myVehicle = new Vehicle();
+        Car myCar = new Car();
+
      // System.out.println(myChassis.toString());
       //System.out.println(yourChassis.toString());
      // System.out.println(myFrame.toString());
-      System.out.println(myFrame1.getChassisType());
-        System.out.println();
-      System.out.println(myEngine);
-        System.out.println();
-        System.out.println(myEngine1.toString());
-        System.out.println();
-        System.out.println(myInterior.toString());
-        System.out.println(myInterior1.toString());
-        System.out.println();
-        System.out.println(myExterior.toString());
-        System.out.println(myExterior1.toString());
-        System.out.println();
-        System.out.println(myVehicle.toString());
-
+//      System.out.println(myFrame1.getChassisType());
+//        System.out.println();
+//      System.out.println(myEngine);
+//        System.out.println();
+//        System.out.println(myEngine1.toString());
+//        System.out.println();
+//        System.out.println(myInterior.toString());
+//        System.out.println(myInterior1.toString());
+//        System.out.println();
+//        System.out.println(myExterior.toString());
+//        System.out.println(myExterior1.toString());
+//        System.out.println();
+//        System.out.println(myVehicle.toString());
+      System.out.println(myCar.toString());
     }
   public static void testVehicle() {
     Vehicle v1 = new Vehicle();
